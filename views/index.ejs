@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Music Downloader</title>
+    <link rel="shortcut icon" href="images/favi.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a
+        href="https://github.com/Shubhamrawat5/apple-playlist-downloader-webapp"
+      >
+        <p id="github-text">github</p>
+        <img id="github-link" src="images/github.png" alt="" />
+      </a>
+      <div class="header-container">
+        <img id="logo" src="images/logo.jpg" alt="" />
+        <div>
+          <h1 id="heading">APPLE MUSIC ♫</h1>
+          <h3 id="subheading">PLAYLIST DOWNLOADER</h3>
+        </div>
+      </div>
+      <p>
+        "Download all your playlist songs from a single page"<br />
+        Feel free to Fork and Star this project in Github.
+      </p>
+    </header>
+    <div class="i">
+      <section id="input-section">
+        <form action="/" method="post">
+          <input
+            type="text"
+            name="playlistUrl"
+            value="<%=playlistUrl%>"
+            placeholder="Paste your playlist link"
+            autofocus
+            autocomplete="off"
+            required
+          />
+          <button>Search</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="playlist playlist-header-section">
+      <div id="left-playlist-section">
+        <h1 class="playlist-heading">PLAYLIST INFO:</h1>
+        <span class="result-info"><%= resultInfo %></span>
+        <h2 class="playlist-subheading">Playlist Name: <%=playlistName%></h2>
+        <h2 class="playlist-subheading">User Name: <%=userName%></h2>
+        <h2 class="playlist-subheading">Total Songs: <%=total%></h2>
+      </div>
+      <div id="right-playlist-section">
+        <button id="download-all-btn">DOWNLOAD<br />ALL</button>
+      </div>
+    </section>
+    <section class="playlist playlist-song-list">
+      <table>
+        <tr id="table-head">
+          <th>Song</th>
+          <th>Singer</th>
+          <th class="match-col">Matched Song</th>
+          <th class="down-col-head">
+            <img
+              class="download-img"
+              src="images/download.svg"
+              alt="download"
+            />
+          </th>
+        </tr>
+        <% for(let index=0;index < songsList.length;++index) { %>
+        <tr>
+          <td id="song-<%=index%>" class="song-name">
+            <%=songsList[index].name %>
+          </td>
+          <td id="singer-<%=index%>" class="singer-name">
+            <%=songsList[index].singer %>
+          </td>
+          <td id="matched-<%=index%>" class="matched-song">searching..</td>
+          <td class="download-col">
+            <a id="download-<%=index%>">
+              <button id="download-btn-<%=index%>" class="download-col-btn">
+                <img
+                  class="download-img"
+                  src="images/download.svg"
+                  alt="download"
+                />
+              </button>
+            </a>
+          </td>
+        </tr>
+        <% } %>
+        <!-- <tr>
+          <td>In Case You Miss Me</td>
+          <td>Matthew John Kurz</td>
+        </tr>
+        <tr>
+          <td>Shayad (From "Love Aaj Kal")</td>
+          <td>Pretam,Arijit Singh</td>
+        </tr>
+        <tr>
+          <td>Wake Me Up When September Ends</td>
+          <td>Green Day</td>
+        </tr> -->
+      </table>
+    </section>
+    <footer></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

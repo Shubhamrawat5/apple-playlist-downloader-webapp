@@ -1,0 +1,330 @@
+body {
+  background-color: #f5f5f7;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  color: #fa243c;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+header {
+  position: relative;
+}
+
+#github-text {
+  all: unset;
+  position: absolute;
+  font-size: 20px;
+  left: -32px;
+  transform: rotateZ(-45deg);
+  top: 23px;
+  width: 130px;
+  color: aliceblue;
+  background: #173f67;
+  z-index: 1;
+  cursor: pointer;
+}
+#github-link {
+  position: absolute;
+  left: -8px;
+  width: 42px;
+  top: -8px;
+  border-radius: 50%;
+  transform: rotate(315deg);
+  cursor: pointer;
+}
+
+.header-container {
+  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-50px);
+}
+
+#logo {
+  margin: 30px;
+  border-radius: 18px;
+  position: relative;
+  top: 13px;
+}
+
+#heading {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+#subheading {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 500;
+  color: #e6e3e3;
+}
+
+header,
+.i {
+  background: #0b2239;
+  color: #f5f5f7;
+}
+
+p {
+  margin: 10px auto 0 auto;
+  width: 50rem;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+.result-info {
+  color: #fa243c;
+  font-size: 30px;
+  margin: 0 10px;
+  font-weight: 900;
+}
+
+#input-section {
+  margin: 2.8rem 0 2.5rem 0;
+  font-size: 0;
+  display: inline-block;
+}
+
+form {
+  display: inline-flex;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+  font-size: 22px;
+  background-color: #fa243c;
+  border-radius: 0 6px 6px 0;
+  color: whitesmoke;
+  height: 2.3rem;
+  outline: none;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.download-img {
+  width: 30px;
+}
+
+input {
+  width: 42rem;
+  height: 1.6rem;
+  outline: none;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 5px 14px 4px 14px;
+  border-radius: 6px 0 0 6px;
+  border-width: 1px;
+  background-color: #f9f9f9;
+  color: #710d18;
+  border-color: #fa243c;
+}
+
+.playlist {
+  text-align: left;
+  width: 50rem;
+  margin: auto;
+}
+
+.playlist-header-section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-heading {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  margin: 20px 0 12px 0;
+  display: inline-block;
+}
+
+.playlist-subheading {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+#download-all-btn {
+  display: none;
+  transition: 0.1s;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 1px 1px 3px 2px #00000033;
+  text-decoration: line-through;
+}
+
+.playlist-song-list {
+  width: auto;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 1.2rem auto;
+  width: 54rem;
+  table-layout: fixed;
+}
+
+#table-head {
+  background-color: #eaeaea;
+}
+
+td,
+th {
+  border: 1px solid #cbbcbc;
+  padding: 8px 2px;
+  width: 21%;
+  overflow-wrap: anywhere;
+}
+
+.match-col {
+  width: 44%;
+}
+
+th {
+  text-align: center;
+}
+
+.download-col {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.down-col-head {
+  width: 13%;
+  text-align: center;
+}
+
+.not-found {
+  opacity: 0.5;
+  cursor: initial;
+  pointer-events: none;
+}
+
+.download-col-btn {
+  font-weight: 600;
+  opacity: 0.4;
+  border-radius: 0;
+  background: inherit;
+  color: #de0019;
+  border: 1px solid #b49898;
+  cursor: default;
+}
+
+.show-download {
+  opacity: 1;
+  cursor: pointer;
+}
+
+a {
+  cursor: default;
+}
+
+.show-download:hover {
+  transition: 0.4s;
+  background-color: #fa243c;
+  color: #f5f5f7;
+}
+
+@media (max-width: 900px) {
+  #logo {
+    width: 60px;
+  }
+  #heading {
+    font-size: 2rem;
+  }
+  #subheading {
+    font-size: 1.5rem;
+  }
+  p {
+    width: 86%;
+  }
+  input {
+    width: 28rem;
+    font-size: 17px;
+  }
+  button {
+    font-size: 19px;
+  }
+  .result-info {
+    font-size: 26px;
+  }
+
+  #playlist {
+    width: 38rem;
+  }
+  .playlist-heading {
+    font-size: 1.4rem;
+  }
+  .playlist-subheading {
+    font-size: 1.3rem;
+  }
+  .playlist-header-section {
+    width: 85%;
+  }
+  table {
+    width: 90%;
+    font-size: 18px;
+  }
+  td,
+  th {
+    width: 21%;
+  }
+  .down-col-head {
+    width: 17%;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-container {
+    align-items: center;
+    transform: translateX(-20px);
+  }
+  #logo {
+    width: 45px;
+    margin: 15px;
+  }
+  #heading {
+    font-size: 28px;
+  }
+  #subheading {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    width: 86%;
+  }
+  input {
+    width: 66vw;
+    font-size: 16px;
+    height: 25px;
+  }
+  button {
+    font-size: 16px;
+    height: 36px;
+  }
+  .result-info {
+    font-size: 22px;
+  }
+
+  .playlist-heading {
+    font-size: 21px;
+  }
+  .playlist-subheading {
+    font-size: 20px;
+  }
+  td,
+  th {
+    width: 21%;
+    font-size: 16px;
+  }
+  .download-img {
+    width: 25px;
+  }
+}
