@@ -8,8 +8,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const INFO_URL = "http://slider.kz/vk_auth.php?q=";
-const DOWNLOAD_URL = "http://slider.kz/download/";
+const INFO_URL = "https://slider.kz/vk_auth.php?q=";
+const DOWNLOAD_URL = "https://slider.kz/download/";
 
 const getSong = async (song, singer) => {
   let query = (song + "%20" + singer).replace(/\s/g, "%20");
