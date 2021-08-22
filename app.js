@@ -18,7 +18,18 @@ const getSong = async (song, singer) => {
   if (data["audios"][""].length <= 1) {
     return { matchTrack: "NOT FOUND!", url: "" };
   } else {
-    let track = data["audios"][""][0];
+    //avoid remix,revisited,mix
+    let i = 0;
+    let track = data["audios"][""][i];
+    while (/remix|revisited|mix/i.test(track.tit_art)) {
+      i += 1;
+      track = data["audios"][""][i];
+    }
+    //if reach the end then select the first song
+    if (!track) {
+      track = data["audios"][""][0];
+    }
+
     let link = DOWNLOAD_URL + track.id + "/";
     link = link + track.duration + "/";
     link = link + track.url + "/";
