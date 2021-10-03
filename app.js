@@ -16,7 +16,8 @@ const getSong = async (song, singer) => {
   console.log(INFO_URL + query);
   const { data } = await axios.get(encodeURI(INFO_URL + query));
 
-  if (data["audios"][""].length <= 1) {
+  // when no result then [{}] is returned so length is always 1, when 1 result then [{id:"",etc:""}]
+  if (!data["audios"][""][0].id) {
     return { matchTrack: "NOT FOUND!", url: "" };
   } else {
     //avoid remix,revisited,mix
