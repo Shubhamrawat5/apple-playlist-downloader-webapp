@@ -24,7 +24,10 @@ const getSong = async (song, singer) => {
     let i = 0;
     let track = data["audios"][""][i];
     let totalTracks = data["audios"][""].length;
-    while (i < totalTracks && /remix|revisited|reverb|mix/i.test(track.tit_art)) {
+    while (
+      i < totalTracks &&
+      /remix|revisited|reverb|mix/i.test(track.tit_art)
+    ) {
       i += 1;
       track = data["audios"][""][i];
     }
@@ -33,11 +36,12 @@ const getSong = async (song, singer) => {
       track = data["audios"][""][0];
     }
 
-    let link = DOWNLOAD_URL + track.id + "/";
-    link = link + track.duration + "/";
-    link = link + track.url + "/";
-    link = link + track.tit_art + ".mp3" + "?extra=";
-    link = link + track.extra;
+    // let link = DOWNLOAD_URL + track.id + "/";
+    // link = link + track.duration + "/";
+    // link = link + track.url + "/";
+    // link = link + track.tit_art + ".mp3" + "?extra=";
+    // link = link + track.extra;
+    let link = track.url;
     link = encodeURI(link);
     return { matchTrack: track.tit_art, url: link };
   }
