@@ -2,9 +2,9 @@
 
 Web app to download your favourite apple music playlist to mp3 directly!
 
-> Open: https://appleplaylistdownloader.herokuapp.com/
+> Open: https://apple-playlist-downloader-pvx.onrender.com/
 
-> Paste your playlist link like:<br> https://music.apple.com/in/playlist/shubham/pl.u-GgA5klRUo9y91A0?ls
+> Paste your playlist link like:<br> https://music.apple.com/fi/playlist/one-direction-essentials/pl.134ef3b46d32414e9b4b5a995a2f3ea7
 
 > Get all the songs direct download link to download from a single page!
 
